@@ -145,16 +145,39 @@ export default function Page() {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-          {[
-            "Python", "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
-            "FastAPI", "Django", "Docker", "AWS", "Azure",
-            "OpenAI", "LangChain", "Pinecone", "MongoDB", "PostgreSQL",
-            "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy"
-          ].map((skill, index) => (
-            <span key={index} className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-sm font-medium hover:bg-white dark:hover:bg-neutral-800 hover:shadow-sm">
-              {skill}
-            </span>
-          ))}
+            {[
+              { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", gradient: "from-yellow-400 to-blue-400" },
+              { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", gradient: "from-yellow-300 to-yellow-500" },
+              { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", gradient: "from-blue-400 to-blue-700" },
+              { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", gradient: "from-cyan-400 to-blue-500" },
+              { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", gradient: "from-gray-700 to-black" },
+              { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", gradient: "from-green-400 to-green-700" },
+              { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg", gradient: "from-teal-400 to-teal-700" },
+              { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", gradient: "from-green-700 to-gray-900" },
+              { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", gradient: "from-blue-400 to-blue-700" },
+              { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", gradient: "from-yellow-400 to-orange-500" },
+              { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg", gradient: "from-blue-500 to-blue-900" },
+              { name: "OpenAI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg", gradient: "from-gray-400 to-gray-700" },
+              { name: "LangChain", icon: "https://avatars.githubusercontent.com/u/139019536?s=200&v=4", gradient: "from-green-400 to-blue-400" },
+              { name: "Pinecone", icon: "https://avatars.githubusercontent.com/u/78167460?s=200&v=4", gradient: "from-green-300 to-green-600" },
+              { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", gradient: "from-green-400 to-green-700" },
+              { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", gradient: "from-blue-400 to-blue-700" },
+              { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", gradient: "from-orange-400 to-yellow-500" },
+              { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", gradient: "from-red-400 to-orange-500" },
+              { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg", gradient: "from-yellow-400 to-blue-400" },
+              { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", gradient: "from-blue-400 to-purple-400" },
+              { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", gradient: "from-blue-400 to-blue-700" }
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center p-4 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                <div className={`w-12 h-12 flex items-center justify-center rounded-xl mb-2 bg-gradient-to-r ${skill.gradient}`}>
+                  <img src={skill.icon} alt={skill.name + ' icon'} className="w-8 h-8 object-contain" />
+                </div>
+                <span className="text-sm font-medium text-neutral-800 dark:text-neutral-200 text-center">{skill.name}</span>
+              </div>
+            ))}
         </div>
       </section>
 

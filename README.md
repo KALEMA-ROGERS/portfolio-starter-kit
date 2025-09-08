@@ -2,9 +2,50 @@
 
 This is a porfolio site template complete with a blog. Includes:
 
----
 **Developed by KALEMA ROGERS**
----
+
+## Features
+- Portfolio pages: Projects, Resume, Contact
+- Blog with MDX/Markdown posts and dynamic routing
+- Custom components: Navigation, Footer, Posts, MDX renderer
+- SEO optimizations: Sitemap, robots.txt, JSON-LD
+- RSS feed and dynamic OG images
+- Vercel analytics integration
+- Syntax highlighting
+- TailwindCSS v4 styling
+
+## Tech Stack
+- Next.js (canary)
+- React 18
+- TypeScript
+- TailwindCSS v4
+- MDX/Markdown
+- Vercel Analytics
+- PostCSS
+
+## Getting Started
+1. Install dependencies:
+	```bash
+	pnpm install
+	```
+2. Run the development server:
+	```bash
+	pnpm dev
+	```
+3. Build for production:
+	```bash
+	pnpm build
+	```
+4. Start production server:
+	```bash
+	pnpm start
+	```
+
+## To Do
+- Add more portfolio sections
+- Improve accessibility
+- Add more blog post templates
+- Enhance mobile responsiveness
 
 
 ## Demo

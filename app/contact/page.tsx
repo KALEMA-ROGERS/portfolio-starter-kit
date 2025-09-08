@@ -1,3 +1,4 @@
+import { useForm, ValidationError } from '@formspree/react';
 export default function ContactPage() {
   return (
     <section className="max-w-4xl mx-auto space-y-12">
@@ -13,36 +14,58 @@ export default function ContactPage() {
         </p>
       </div>
 
+        {/* Contact Form */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4 text-center">Send a Direct Message</h2>
+          <form
+            className="max-w-xl mx-auto p-6 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow"
+            method="POST"
+            //  https://formspree.io - It's where you create the form from.
+            action="https://formspree.io/f/mzzayojn" // Replace with your Formspree endpoint or backend
+          >
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Name</label>
+              <input type="text" id="name" name="name" required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Email</label>
+              <input type="email" id="email" name="email" required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Message</label>
+              <textarea id="message" name="message" rows={5} required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
+            </div>
+            {/* Simple spam protection: honeypot field */}
+            <div style={{ display: 'none' }}>
+              <label htmlFor="_gotcha">Leave this field blank</label>
+              <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+            </div>
+            <button type="submit" className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">Send Message</button>
+          </form>
+        </div>
+
       {/* Contact Cards */}
       <div className="grid md:grid-cols-3 gap-6">
-        {/* Email Card */}
-        <a 
-          href="mailto:rogerskalema0@gmail.com"
-          className="group p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
-        >
-          <div className="flex items-center space-x-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                <path d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5A2.25 2.25 0 0122.5 6.75v10.5a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 17.25V6.75zM3 7.06v.177l8.433 5.62a.75.75 0 00.834 0L20.7 7.237V7.06A.75.75 0 0020.25 6.5H3.75A.75.75 0 003 7.06z" />
-              </svg>
+        {/* Contact Form */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4 text-center">Send a Direct Message</h2>
+          <form
+            action="https://formspree.io/f/mzzayojn"
+            method="POST"
+            className="max-w-xl mx-auto p-6 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow"
+          >
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Your email:</label>
+              <input type="email" id="email" name="email" required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
             </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
-                Email
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400 truncate group-hover:text-neutral-800 dark:group-hover:text-neutral-200 transition-colors">
-                rogerskalema0@gmail.com
-              </p>
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Your message:</label>
+              <textarea id="message" name="message" rows={5} required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
             </div>
-            <div className="flex-shrink-0">
-              <svg className="w-5 h-5 text-neutral-400 group-hover:text-red-500 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </div>
-          </div>
-        </a>
-
-        {/* LinkedIn Card */}
+            {/* Add more fields if needed */}
+            <button type="submit" className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">Send</button>
+          </form>
+        </div>
         <a 
           href="https://www.linkedin.com/in/kalema-rogers-a1b9302ba"
           target="_blank"
