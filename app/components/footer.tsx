@@ -18,68 +18,93 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mb-16 mt-20">
-      {/* Subtle separator line */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700 mb-12"></div>
+    <footer className="mt-32 mb-16">
+      {/* CTA Section */}
+      <div className="text-center mb-16 p-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-3xl border border-blue-100 dark:border-blue-900/30">
+        <h2 className="text-3xl font-bold mb-4">Ready to turn your AI vision into reality?</h2>
+        <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
+          Whether you're building intelligent chatbots, training custom LLMs, or deploying cutting-edge models — 
+          let's create something extraordinary together. Reach out anytime — I'm here to help.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:rogerskalema0@gmail.com"
+            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            Get In Touch
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kalema-rogers-a1b9302ba"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 border border-neutral-300 dark:border-neutral-700 rounded-full font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-300"
+          >
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+
+      {/* Contact Info */}
+      <div className="mb-12 text-center">
+        <h3 className="text-lg font-semibold mb-2">Contact Me</h3>
+        <p className="text-neutral-600 dark:text-neutral-400">
+          rogerskalema0@gmail.com
+        </p>
+      </div>
       
       {/* Social links */}
       <div className="mb-8">
-        <h3 className="text-sm font-medium text-neutral-800 dark:text-neutral-200 mb-4 tracking-wide">
+        <h3 className="text-sm font-medium text-neutral-800 dark:text-neutral-200 mb-6 tracking-wide text-center">
           CONNECT WITH ME
         </h3>
-        <ul className="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-6">
+        <ul className="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-6 justify-center">
           <li>
             <a
-              className="group flex items-center transition-all duration-200 hover:text-neutral-800 dark:hover:text-neutral-100 text-neutral-600 dark:text-neutral-400 py-2 px-3 -mx-3 rounded-lg hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50"
+              className="group flex items-center justify-center transition-all duration-200 hover:text-neutral-800 dark:hover:text-neutral-100 text-neutral-600 dark:text-neutral-400 py-3 px-6 rounded-full hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50"
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.linkedin.com/in/kalema-rogers-a1b9302ba"
             >
-              <ArrowIcon />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                <path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666H9.083V9h3.104v1.561h.044c.433-.82 1.493-1.685 3.071-1.685 3.287 0 3.893 2.164 3.893 4.977v6.6zM5.337 7.433a1.804 1.804 0 110-3.609 1.804 1.804 0 010 3.609zM6.96 20.452H3.713V9H6.96v11.452z"/>
+              </svg>
               <span className="ml-2 font-medium">LinkedIn</span>
-              <span className="ml-2 text-xs text-neutral-500 dark:text-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                Connect professionally
-              </span>
             </a>
           </li>
           <li>
             <a
-              className="group flex items-center transition-all duration-200 hover:text-neutral-800 dark:hover:text-neutral-100 text-neutral-600 dark:text-neutral-400 py-2 px-3 -mx-3 rounded-lg hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50"
+              className="group flex items-center justify-center transition-all duration-200 hover:text-neutral-800 dark:hover:text-neutral-100 text-neutral-600 dark:text-neutral-400 py-3 px-6 rounded-full hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50"
               rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/KALEMA-ROGERS"
             >
-              <ArrowIcon />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12a12 12 0 008.207 11.387c.6.11.82-.26.82-.58 0-.287-.01-1.046-.016-2.053-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.758-1.334-1.758-1.09-.744.083-.73.083-.73 1.204.085 1.838 1.237 1.838 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.419-1.305.762-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.3 1.23a11.5 11.5 0 016.004 0c2.29-1.553 3.297-1.23 3.297-1.23.655 1.652.243 2.873.119 3.176.77.84 1.235 1.911 1.235 3.22 0 4.61-2.807 5.624-5.48 5.92.43.37.815 1.102.815 2.222 0 1.604-.015 2.896-.015 3.292 0 .32.218.694.825.576A12.003 12.003 0 0024 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd" />
+              </svg>
               <span className="ml-2 font-medium">GitHub</span>
-              <span className="ml-2 text-xs text-neutral-500 dark:text-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                View my code
-              </span>
             </a>
           </li>
           <li>
             <a
-              className="group flex items-center transition-all duration-200 hover:text-neutral-800 dark:hover:text-neutral-100 text-neutral-600 dark:text-neutral-400 py-2 px-3 -mx-3 rounded-lg hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50"
+              className="group flex items-center justify-center transition-all duration-200 hover:text-neutral-800 dark:hover:text-neutral-100 text-neutral-600 dark:text-neutral-400 py-3 px-6 rounded-full hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50"
               rel="noopener noreferrer"
               target="_blank"
               href="mailto:rogerskalema0@gmail.com"
             >
-              <ArrowIcon />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                <path d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5A2.25 2.25 0 0122.5 6.75v10.5a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 17.25V6.75zM3 7.06v.177l8.433 5.62a.75.75 0 00.834 0L20.7 7.237V7.06A.75.75 0 0020.25 6.5H3.75A.75.75 0 003 7.06z" />
+              </svg>
               <span className="ml-2 font-medium">Email</span>
-              <span className="ml-2 text-xs text-neutral-500 dark:text-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                Let's talk
-              </span>
             </a>
           </li>
         </ul>
       </div>
 
       {/* Copyright section */}
-      <div className="pt-6 border-t border-neutral-200/50 dark:border-neutral-800/50">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">
-            © {new Date().getFullYear()} <span className="font-medium text-neutral-700 dark:text-neutral-300">Kalema Rogers</span>. All rights reserved.
-          </p>
-        </div>
+      <div className="pt-6 border-t border-neutral-200/50 dark:border-neutral-800/50 text-center">
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          Copyright {new Date().getFullYear()} © <span className="font-medium text-neutral-700 dark:text-neutral-300">Kalema Rogers</span> - Personal Portfolio. Developed by Kalema Rogers
+        </p>
       </div>
     </footer>
   );

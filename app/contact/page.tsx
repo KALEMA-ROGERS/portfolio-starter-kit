@@ -22,7 +22,9 @@ export default function ContactPage() {
         >
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
-              📧
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5A2.25 2.25 0 0122.5 6.75v10.5a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 17.25V6.75zM3 7.06v.177l8.433 5.62a.75.75 0 00.834 0L20.7 7.237V7.06A.75.75 0 0020.25 6.5H3.75A.75.75 0 003 7.06z" />
+              </svg>
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
@@ -49,14 +51,16 @@ export default function ContactPage() {
         >
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
-              💼
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666H9.083V9h3.104v1.561h.044c.433-.82 1.493-1.685 3.071-1.685 3.287 0 3.893 2.164 3.893 4.977v6.6zM5.337 7.433a1.804 1.804 0 110-3.609 1.804 1.804 0 010 3.609zM6.96 20.452H3.713V9H6.96v11.452z"/>
+              </svg>
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 LinkedIn
               </h3>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 truncate group-hover:text-neutral-800 dark:group-hover:text-neutral-200 transition-colors">
-                kalema-rogers
+                Kalema Rogers
               </p>
             </div>
             <div className="flex-shrink-0">
@@ -76,18 +80,49 @@ export default function ContactPage() {
         >
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 dark:from-gray-600 dark:to-gray-800 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
-              💻
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path fillRule="evenodd" d="M12 0C5.373 0 0 5.373 0 12a12 12 0 008.207 11.387c.6.11.82-.26.82-.58 0-.287-.01-1.046-.016-2.053-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.758-1.334-1.758-1.09-.744.083-.73.083-.73 1.204.085 1.838 1.237 1.838 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.419-1.305.762-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.3 1.23a11.5 11.5 0 016.004 0c2.29-1.553 3.297-1.23 3.297-1.23.655 1.652.243 2.873.119 3.176.77.84 1.235 1.911 1.235 3.22 0 4.61-2.807 5.624-5.48 5.92.43.37.815 1.102.815 2.222 0 1.604-.015 2.896-.015 3.292 0 .32.218.694.825.576A12.003 12.003 0 0024 12c0-6.627-5.373-12-12-12z" clipRule="evenodd" />
+              </svg>
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
                 GitHub
               </h3>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 truncate group-hover:text-neutral-800 dark:group-hover:text-neutral-200 transition-colors">
-                Kalema Rogers
+                @KALEMA-ROGERS
               </p>
             </div>
             <div className="flex-shrink-0">
               <svg className="w-5 h-5 text-neutral-400 group-hover:text-gray-500 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        
+        {/* LabLab Profile Card */}
+        <a 
+          href="https://lablab.ai/u/@Kalema_Rogers256"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
+        >
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path d="M8.5 3a1 1 0 100 2h.5v3.586l-4.95 4.95A3.5 3.5 0 006.5 20h11a3.5 3.5 0 002.45-5.964l-4.95-4.95V5h.5a1 1 0 100-2H8.5zm3 7.414L15.586 14H8.414L11.5 10.414z"/>
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                LabLab Profile
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 truncate group-hover:text-neutral-800 dark:group-hover:text-neutral-200 transition-colors">
+                @Kalema_Rogers256
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <svg className="w-5 h-5 text-neutral-400 group-hover:text-purple-500 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </div>
