@@ -1,3 +1,4 @@
+
 import Link from 'next/link'
 import { BlogPosts } from 'app/components/posts'
 
@@ -30,108 +31,84 @@ export default function Page() {
 
       {/* Services Section */}
       <section className="space-y-12">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-2 accent-title">My Services</h2>
-          <div className="accent-underline"></div>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Don't miss out on the latest insights about AI development, Machine Learning solutions, and cutting-edge technology trends...
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { title: "AI & ML Solutions", description: "Build intelligent systems using MCP, agentic AI, fine-tuned models, and computer vision to solve real-world problems across multiple industries.", icon: "ai", gradient: "from-blue-500 to-cyan-600" },
-            { title: "GenAI & Prompts", description: "Design LLM-based applications with advanced prompt engineering and fine-tuning for content generation, chat systems, and enterprise AI workflows.", icon: "brain", gradient: "from-purple-500 to-pink-600" },
-            { title: "Domain Applications", description: "Deliver AI solutions in healthcare, e-commerce, entertainment, and finance, tailored to each industry's unique challenges and use cases.", icon: "target", gradient: "from-emerald-500 to-teal-600" },
-            { title: "Data & Analytics", description: "Extract actionable insights and forecast trends from large datasets using machine learning, statistical modeling, and predictive algorithms.", icon: "chart", gradient: "from-rose-500 to-red-600" },
-            { title: "AI Automation", description: "Develop autonomous AI agents that plan, reason, and interact across complex workflows to streamline operations and boost productivity.", icon: "bolt", gradient: "from-amber-500 to-orange-600" },
-            { title: "AI Infrastructure", description: "Deploy scalable, cloud-integrated AI systems using Docker, FastAPI, and cloud platforms like AWS and GCP for real-time, production-grade performance.", icon: "cloud", gradient: "from-indigo-500 to-blue-600" }
-          ].map((service, index) => (
-            <div key={index} className="p-6 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300">
-              <div className={`flex items-center justify-center w-12 h-12 rounded-xl mb-4 bg-gradient-to-r ${service.gradient}`}>
-                <HomeIcon name={service.icon} />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">{service.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Projects Section */}
-      <section className="space-y-12">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-2 accent-title">Featured Projects</h2>
-          <div className="accent-underline"></div>
-        </div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           {[
             {
               title: "AI Chat Assistant",
               description: "Built a sophisticated AI chatbot with RAG capabilities, supporting multiple LLM providers and real-time streaming responses.",
+              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg",
               features: [
                 "Multi-LLM Integration (GPT-4, Claude, Gemini)",
                 "Real-time WebSocket streaming",
                 "Advanced RAG with vector search",
                 "Custom prompt engineering"
               ],
-              tech: ["Next.js", "FastAPI", "Pinecone", "OpenAI"]
+              tech: ["Next.js", "FastAPI", "Pinecone", "OpenAI"],
+              link: "#"
             },
             {
               title: "ML Model Deployment",
               description: "Deployed a computer vision model for image classification with automated scaling and monitoring.",
+              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
               features: [
                 "Docker containerization",
                 "Auto-scaling infrastructure",
                 "Real-time monitoring",
                 "RESTful API endpoints"
               ],
-              tech: ["Python", "Docker", "AWS", "TensorFlow"]
+              tech: ["Python", "Docker", "AWS", "TensorFlow"],
+              link: "#"
             },
             {
               title: "Data Analytics Dashboard",
               description: "Created an interactive dashboard for business intelligence with predictive analytics and automated reporting.",
+              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg",
               features: [
                 "Interactive visualizations",
                 "Predictive modeling",
                 "Automated reports",
                 "Real-time data processing"
               ],
-              tech: ["React", "Python", "PostgreSQL", "D3.js"]
+              tech: ["React", "Python", "PostgreSQL", "D3.js"],
+              link: "#"
             },
             {
               title: "AI Workflow Automation",
               description: "Developed an AI-powered workflow automation system that processes documents and triggers actions based on content analysis.",
+              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
               features: [
                 "Document processing",
                 "NLP-based classification",
                 "Workflow orchestration",
                 "Integration APIs"
               ],
-              tech: ["Node.js", "LangChain", "MongoDB", "Zapier"]
+              tech: ["Node.js", "LangChain", "MongoDB", "Zapier"],
+              link: "#"
             }
           ].map((project, index) => (
-            <div key={index} className="p-6 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed">{project.description}</p>
-              
+            <div key={index} className="relative p-6 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950/30 dark:to-purple-950/30 shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 flex flex-col">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-white dark:bg-neutral-900 shadow-lg">
+                  <img src={project.image} alt={project.title + ' logo'} className="w-12 h-12 object-contain" />
+                </div>
+                <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{project.title}</h3>
+              </div>
+              <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed">{project.description}</p>
               <div className="mb-4">
-                <h4 className="font-semibold mb-2">Key Features:</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+                <h4 className="font-semibold mb-2 text-blue-700 dark:text-blue-300">Key Features:</h4>
+                <ul className="flex flex-wrap gap-2">
                   {project.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
+                    <li key={idx} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium shadow">{feature}</li>
                   ))}
                 </ul>
               </div>
-              
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">
-                    {tech}
-                  </span>
+                  <span key={idx} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-xs font-semibold shadow">{tech}</span>
                 ))}
               </div>
+              <a href={project.link} className="mt-auto inline-block px-6 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow hover:scale-105 transition-all duration-300">View Project</a>
+              <span className="absolute inset-0 rounded-3xl pointer-events-none" style={{boxShadow: '0 0 32px 0 rgba(59,130,246,0.10)'}}></span>
             </div>
           ))}
         </div>
@@ -144,40 +121,50 @@ export default function Page() {
           <div className="accent-underline"></div>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-            {[
-              { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", gradient: "from-yellow-400 to-blue-400" },
-              { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", gradient: "from-yellow-300 to-yellow-500" },
-              { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", gradient: "from-blue-400 to-blue-700" },
-              { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", gradient: "from-cyan-400 to-blue-500" },
-              { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", gradient: "from-gray-700 to-black" },
-              { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", gradient: "from-green-400 to-green-700" },
-              { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg", gradient: "from-teal-400 to-teal-700" },
-              { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", gradient: "from-green-700 to-gray-900" },
-              { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", gradient: "from-blue-400 to-blue-700" },
-              { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", gradient: "from-yellow-400 to-orange-500" },
-              { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg", gradient: "from-blue-500 to-blue-900" },
-              { name: "OpenAI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg", gradient: "from-gray-400 to-gray-700" },
-              { name: "LangChain", icon: "https://avatars.githubusercontent.com/u/139019536?s=200&v=4", gradient: "from-green-400 to-blue-400" },
-              { name: "Pinecone", icon: "https://avatars.githubusercontent.com/u/78167460?s=200&v=4", gradient: "from-green-300 to-green-600" },
-              { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", gradient: "from-green-400 to-green-700" },
-              { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", gradient: "from-blue-400 to-blue-700" },
-              { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", gradient: "from-orange-400 to-yellow-500" },
-              { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", gradient: "from-red-400 to-orange-500" },
-              { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg", gradient: "from-yellow-400 to-blue-400" },
-              { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", gradient: "from-blue-400 to-purple-400" },
-              { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", gradient: "from-blue-400 to-blue-700" }
-            ].map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center p-4 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <div className={`w-12 h-12 flex items-center justify-center rounded-xl mb-2 bg-gradient-to-r ${skill.gradient}`}>
-                  <img src={skill.icon} alt={skill.name + ' icon'} className="w-8 h-8 object-contain" />
-                </div>
-                <span className="text-sm font-medium text-neutral-800 dark:text-neutral-200 text-center">{skill.name}</span>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
+          {[
+            { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+            { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+            { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+            { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+            { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+            { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+            { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+            { name: "AWS", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+            { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+            { name: "OpenAI", icon: "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/images/openai-logo.png" },
+            { name: "LangChain", icon: "https://avatars.githubusercontent.com/u/139019536?s=200&v=4" },
+            { name: "Pinecone", icon: "https://avatars.githubusercontent.com/u/78167460?s=200&v=4" },
+            { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+            { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+            { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+            { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+            { name: "Scikit-learn", icon: "https://upload.wikimedia.orgikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
+            { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+            { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+            { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+            { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" },
+            { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+            { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+            { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+            { name: "Web3", icon: "https://raw.githubusercontent.com/web3/web3.js/1.x/docs/assets/logo/web3js.svg" },
+            { name: "Solidity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
+            { name: "DeepLearning.AI", icon: "https://avatars.githubusercontent.com/u/40403612?s=200&v=4" },
+          ].map((skill, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center p-4 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group relative"
+              style={{ boxShadow: '0 4px 24px 0 rgba(59,130,246,0.08), 0 1.5px 8px 0 rgba(168,139,250,0.08)' }}
+            >
+              <div className="w-14 h-14 flex items-center justify-center rounded-full mb-2 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 group-hover:from-blue-200 group-hover:to-purple-200 transition-all duration-300 shadow-lg">
+                <img src={skill.icon} alt={skill.name + ' icon'} className="w-10 h-10 object-contain group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
               </div>
-            ))}
+              <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 text-center group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">{skill.name}</span>
+              <span className="absolute inset-0 rounded-3xl pointer-events-none" style={{boxShadow: '0 0 32px 0 rgba(59,130,246,0.10)'}}></span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -187,21 +174,20 @@ export default function Page() {
           <h2 className="text-4xl font-bold mb-2 accent-title">About Me</h2>
           <div className="accent-underline"></div>
         </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="p-8 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800">
-            <h3 className="text-2xl font-semibold mb-4">Kalema Rogers | Full Stack Developer & AI/ML Engineer</h3>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-              I have 2 years of experience building AI‑powered software — chatbots, agentic systems (MCP/voice),
-              RAG pipelines, and fine‑tuned LLM solutions — and delivering them end‑to‑end with modern web stacks.
-              Based in Kampala, Uganda. I love shipping practical, scalable AI products that solve real problems.
+        <div className="max-w-3xl mx-auto">
+          <div className="relative p-8 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-blue-950/30 dark:to-purple-950/30 shadow-lg flex flex-col items-center">
+              <img src="/DSC_3472.JPG" alt="Kalema Rogers Avatar" className="w-28 h-28 rounded-full border-4 border-blue-500 shadow-lg mb-4 object-cover bg-white" />
+            <h3 className="text-2xl font-bold mb-2 text-neutral-900 dark:text-neutral-100">Kalema Rogers</h3>
+            <p className="text-lg font-medium text-blue-700 dark:text-blue-300 mb-2">Full Stack Developer & AI/ML Engineer</p>
+            <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4 text-center">
+              I have 2 years of experience building AI‑powered software — chatbots, agentic systems (MCP/voice), RAG pipelines, and fine‑tuned LLM solutions — and delivering them end‑to‑end with modern web stacks. Based in Kampala, Uganda. I love shipping practical, scalable AI products that solve real problems.
             </p>
-            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              Contact: <a className="underline decoration-dotted" href="mailto:rogerskalema0@gmail.com">rogerskalema0@gmail.com</a> ·
-              <a className="underline decoration-dotted ml-2" href="https://www.linkedin.com/in/kalema-rogers-a1b9302ba" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
-              <a className="underline decoration-dotted ml-2" href="https://github.com/KALEMA-ROGERS" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-              <a className="underline decoration-dotted ml-2" href="https://lablab.ai/u/@Kalema_Rogers256" target="_blank" rel="noopener noreferrer">LabLab</a>
-            </p>
+            <div className="flex gap-4 justify-center mt-2">
+              <a href="mailto:rogerskalema0@gmail.com" className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow hover:scale-105 transition">Email</a>
+              <a href="https://www.linkedin.com/in/kalema-rogers-a1b9302ba" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-xl border border-blue-500 text-blue-700 dark:text-blue-300 font-semibold shadow hover:bg-blue-50 dark:hover:bg-blue-900 transition">LinkedIn</a>
+              <a href="https://github.com/KALEMA-ROGERS" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-xl border border-neutral-300 text-neutral-700 dark:text-neutral-300 font-semibold shadow hover:bg-neutral-100 dark:hover:bg-neutral-800 transition">GitHub</a>
+              <a href="https://lablab.ai/u/@Kalema_Rogers256" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-xl border border-pink-400 text-pink-600 dark:text-pink-300 font-semibold shadow hover:bg-pink-50 dark:hover:bg-pink-900 transition">LabLab</a>
+            </div>
           </div>
         </div>
       </section>
@@ -209,10 +195,13 @@ export default function Page() {
       {/* Blog Section */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Latest Blog Posts</h2>
+          <h2 className="text-4xl font-bold mb-4 accent-title">Latest Blog Posts</h2>
+          <div className="accent-underline"></div>
         </div>
         <div className="my-8">
-          <BlogPosts />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <BlogPosts cardMode />
+          </div>
         </div>
       </section>
     </div>

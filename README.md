@@ -1,7 +1,3 @@
-# Portfolio Blog Starter
-
-This is a porfolio site template complete with a blog. Includes:
-
 **Developed by KALEMA ROGERS**
 
 ## Features
@@ -30,15 +26,7 @@ This is a porfolio site template complete with a blog. Includes:
 	```
 2. Run the development server:
 	```bash
-	pnpm dev
-	```
-3. Build for production:
-	```bash
-	pnpm build
-	```
-4. Start production server:
-	```bash
-	pnpm start
+	npm run dev
 	```
 
 ## To Do
@@ -68,12 +56,6 @@ Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packag
 
 ```bash
 pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
-```
-
-Then, run Next.js in development mode:
-
-```bash
-pnpm dev
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).

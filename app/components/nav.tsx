@@ -66,11 +66,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 mb-16">
       <div className="w-full">
         <nav
-          className={`flex flex-row items-center justify-center relative px-6 py-4 transition-all duration-500 ${
+          className={`flex flex-row items-center justify-between relative px-6 py-4 transition-all duration-500 ${
             isScrolled ? 'backdrop-blur-md bg-white/90 dark:bg-black/90 rounded-2xl shadow-lg border border-neutral-200/50 dark:border-neutral-800/50' : 'bg-transparent'
           }`}
           id="nav"
         >
+          {/* Logo/Avatar */}
+          <Link href="/" className="flex items-center mr-8">
+            <img src="/DSC_3472.JPG" alt="Logo" className="w-20 h-20 rounded-full border-2 border-blue-500 shadow" />
+          </Link>
           <div className="flex flex-row space-x-1 relative">
             {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = pathname === path
@@ -92,12 +96,14 @@ export function Navbar() {
                 >
                   <span className="relative">
                     {name}
+                    {isActive && (
+                      <span className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full animate-pulse"></span>
+                    )}
                   </span>
                 </Link>
               )
             })}
           </div>
-
         </nav>
       </div>
     </header>

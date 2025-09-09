@@ -13,7 +13,8 @@ export default function ContactPage() {
           feel free to reach out through any of the methods below.
         </p>
       </div>
-
+      
+    
         {/* Contact Form */}
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4 text-center">Send a Direct Message</h2>
@@ -35,42 +36,23 @@ export default function ContactPage() {
               <label htmlFor="message" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Message</label>
               <textarea id="message" name="message" rows={5} required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
             </div>
-            {/* Simple spam protection: honeypot field */}
+            {/* Simple spam protection: honeypot field */}    
             <div style={{ display: 'none' }}>
               <label htmlFor="_gotcha">Leave this field blank</label>
               <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
             </div>
             <button type="submit" className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">Send Message</button>
+            <p className="mt-4 text-center text-sm text-neutral-600 dark:text-neutral-400">Messages will be sent to <span className="font-semibold">rogerskalema0@gmail.com</span> via Formspree.</p>
           </form>
         </div>
 
-      {/* Contact Cards */}
-      <div className="grid md:grid-cols-3 gap-6">
-        {/* Contact Form */}
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-4 text-center">Send a Direct Message</h2>
-          <form
-            action="https://formspree.io/f/mzzayojn"
-            method="POST"
-            className="max-w-xl mx-auto p-6 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow"
-          >
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Your email:</label>
-              <input type="email" id="email" name="email" required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="message" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Your message:</label>
-              <textarea id="message" name="message" rows={5} required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
-            </div>
-            {/* Add more fields if needed */}
-            <button type="submit" className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">Send</button>
-          </form>
-        </div>
+      <div className="flex flex-col md:flex-row gap-6 justify-center mt-8">
+        {/* LinkedIn Card */}
         <a 
           href="https://www.linkedin.com/in/kalema-rogers-a1b9302ba"
           target="_blank"
           rel="noopener noreferrer"
-          className="group p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
+          className="group p-6 flex-1 min-w-[250px] rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
         >
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
@@ -99,7 +81,7 @@ export default function ContactPage() {
           href="https://github.com/KALEMA-ROGERS"
           target="_blank"
           rel="noopener noreferrer"
-          className="group p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
+          className="group p-6 flex-1 min-w-[250px] rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
         >
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 dark:from-gray-600 dark:to-gray-800 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
@@ -122,13 +104,13 @@ export default function ContactPage() {
             </div>
           </div>
         </a>
-        
+
         {/* LabLab Profile Card */}
         <a 
           href="https://lablab.ai/u/@Kalema_Rogers256"
           target="_blank"
           rel="noopener noreferrer"
-          className="group p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
+          className="group p-6 flex-1 min-w-[250px] rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 hover:shadow-lg dark:hover:shadow-2xl hover:-translate-y-1"
         >
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
