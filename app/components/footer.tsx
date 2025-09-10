@@ -23,8 +23,8 @@ export default function Footer() {
       <div className="text-center mb-16 p-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-3xl border border-blue-100 dark:border-blue-900/30">
         <h2 className="text-3xl font-bold mb-4">Ready to turn your AI vision into reality?</h2>
         <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 max-w-2xl mx-auto">
-          Whether you're building intelligent chatbots, training custom LLMs, or deploying cutting-edge models — 
-          let's create something extraordinary together. Reach out anytime — I'm here to help.
+          Whether you're building intelligent chatbots, training custom LLMs, or deploying cutting-edge models, 
+          let's create something extraordinary together. Reach out anytime
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

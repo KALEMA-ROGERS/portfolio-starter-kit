@@ -7,69 +7,74 @@ export const metadata = {
 
 const featuredProjects = [
   {
-    title: "Screenshot-to-Code",
-    description: "I enabled the AI to accurately recognize and understand UI components from screenshots. I made sure the generated code is clean and supports multiple stacks like HTML, Tailwind, and React. I integrated both GPT-4o and Claude Sonnet 3.7, so users can switch and compare results easily. I implemented WebSocket streaming so users see results in real-time as code is generated.",
+    title: "Ask iBake",
+    description: "Ask iBake is an AI-powered chatbot created to help baking lovers of all levels. Baking often feels tricky exact measurements, ingredient substitutions, and fixing mistakes can overwhelm even experienced bakers. Ask iBake solves this by acting as a personal baking assistant that gives instant, accurate, and easy-to-follow guidance. Users can chat naturally with Ask iBake to get answers about recipes, techniques, and troubleshooting.",
     features: [
-      "AI-powered UI component recognition",
-      "Multi-stack code generation (HTML, Tailwind, React)",
-      "Dual LLM integration (GPT-4o & Claude Sonnet 3.7)",
-      "Real-time WebSocket streaming"
+      "Recipe suggestions",
+      "Ingredient substitutions",
+      "Troubleshooting baking issues",
+      "Personalized baking tips"
     ],
-    tech: ["Next.js", "OpenAI API", "Anthropic API", "WebSocket", "Tailwind CSS"],
+    tech: ["Streamlit", "GPT-5 API", "Python"],
+    gradient: "from-pink-500 to-yellow-500",
+    status: "Live",
+    link: "https://lablab.ai/event/co-creating-with-gpt-5/the-chotas-thug-team/ask-ibake"
+  },
+  {
+    title: "Neurocart ai",
+    description: "The Metro Store AI Assistant is a Flask-based web application designed to enhance the online shopping experience through AI-driven interactions. It offers natural, friendly conversations, personalized product recommendations, and seamless order processing. It integrates a CSV-based product database and supports user sessions for a tailored, engaging shopping journey. Category tags: Shopping, Ecommerce, Customer Support.",
+    features: [
+      "Robust product search",
+      "shopping cart management", 
+      "email order confirmations",
+       "An analytics dashboard for insights into product categories, brands, and pricing trends.",
+    ], 
+    tech: ["Python", "Pandas", "Plotly", "Groq API", "Flask", "HTML5", "CSS3"],
     gradient: "from-blue-500 to-cyan-600",
-    status: "Live"
+    status: "Live",
+    link: "https://lablab.ai/event/raise-your-hack/neurocart-ai-prosus-track/neurocart-ai-prosus-track"
   },
   {
-    title: "Mochii AI",
-    description: "Multimodal AI Models: Access to advanced models including GPT-4o, Claude 3.7 Sonnet, Gemini 2.0 Flash, DeepSeek R1, and O3 Mini, enabling a wide range of capabilities from text generation to image and video understanding. Smart AI Conversations: Engage in intelligent dialogues with AI assistants tailored for various tasks such as writing, coding, and data analysis.",
+    title: "Smart Email Sorting and Reply Suggestion (Inbox IQ)",
+    description: "Inbox IQ is a powerful email management assistant powered by generative AI, designed to optimize your Email experience. This AI-driven tool automatically categorizes your emails into intuitive groups such as social, urgent, newsletter, action-needed, helping you stay organized with minimal effort. It also leverages generative AI (GPT-4 models) to provide smart reply suggestions, allowing you to respond quickly and professionally with just a click.",
     features: [
-      "Multimodal AI model access",
-      "Intelligent conversation system",
-      "PDF and image analysis",
-      "Deep research capabilities"
+      "Email categorization",
+      "Smart reply suggestions",
+      "Gmail integration",
+      "Generative AI"
     ],
-    tech: ["React", "Node.js", "OpenAI", "Anthropic", "Google AI"],
-    gradient: "from-purple-500 to-pink-600",
-    status: "Live"
+    tech: ["GPT-4", "HuggingFace", "Email API", "Streamlit"],
+    gradient: "from-green-500 to-teal-600",
+    status: "Live",
+    link: "https://lablab.ai/event/execute-ai-genesis/firstcrack/smart-email-sorting-and-reply-suggestion"
   },
   {
-    title: "SenseTask",
-    description: "SenseTask is an AI-powered platform designed to automate document processing and workflow management, streamlining tasks such as invoice handling, contract management, and receipt processing. By leveraging advanced Optical Character Recognition (OCR) and machine learning, SenseTask enables businesses to extract, validate, and organize data from various document types with high accuracy.",
+    title: "Holisti-Score AI",
+    description: "AI-powered platform for holistic credit scoring and analytics. Provides actionable insights for business and individual creditworthiness.",
     features: [
-      "Document processing automation",
-      "Advanced OCR capabilities",
-      "Workflow management",
-      "Data validation and organization"
+      "Holistic scoring",
+      "Analytics dashboard",
+      "Actionable insights",
+      "Recommmended actions"
     ],
-    tech: ["Python", "FastAPI", "OpenCV", "Tesseract", "MongoDB"],
-    gradient: "from-emerald-500 to-teal-600",
-    status: "In Development"
+    tech: ["React", "MongoDB", "JavaScript", "OpenAPI"],
+    gradient: "from-purple-500 to-indigo-600",
+    status: "Live",
+    link: "https://holisti-score-ai.lovable.app/"
   },
   {
-    title: "Miniflow AI",
-    description: "Next.js: For building dynamic and responsive user interfaces, particularly the visual workflow editor. Styled Components: For styling components and ensuring a modern, clean design. NestJS: For building scalable and efficient server-side applications. RabbitMQ: For managing background tasks and ensuring smooth execution of workflows.",
+    title: "FintelliUG",
+    description: "FintelliUG is an intelligent research platform that helps venture capital firms and investors make data-driven decisions in Uganda's rapidly growing fintech market. Using a network of specialized AI agents, it continuously monitors social conversations, tracks competitors, and analyzes market sentiment to provide actionable investment insights.",
     features: [
-      "Visual workflow editor",
-      "Background task management",
-      "Scalable server architecture",
-      "Modern UI/UX design"
+      "Executive Dashboard",
+      "Market Sentiment Analysis",
+      "Competitive Intelligence",
+      "Real-Time Social Intelligence"
     ],
-    tech: ["Next.js", "NestJS", "RabbitMQ", "Styled Components", "PostgreSQL"],
-    gradient: "from-amber-500 to-orange-600",
-    status: "Live"
-  },
-  {
-    title: "Lunacal",
-    description: "Google Calendar API, Outlook Calendar API, Apple Calendar API: For syncing user availability and appointments with external calendar platforms. Zapier: For automating workflows and connecting LunaCal.ai with other third-party applications like payment systems and email clients. Natural Language Processing (NLP): For processing user inputs when they book or inquire about appointments.",
-    features: [
-      "Multi-platform calendar sync",
-      "Workflow automation",
-      "Natural language processing",
-      "Automated scheduling algorithms"
-    ],
-    tech: ["React", "Node.js", "Google Calendar API", "Zapier", "NLP"],
-    gradient: "from-indigo-500 to-blue-600",
-    status: "Live"
+    tech: ["LangChain + LangGraph ", "OpenAI GPT-4 ", "ChromaDB", "Streamlit", "SQLite + Redis"],
+    gradient: "from-orange-500 to-yellow-500",
+    status: "Live",
+    link: "https://github.com/Samuelms46/FintelliUG"
   }
 ];
 
@@ -178,16 +183,18 @@ export default function Page() {
         ))}
       </div>
 
-      {/* Blog Posts Section */}
-      <div className="space-y-8">
+      {/* Blog Section */}
+      <section className="space-y-12">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Latest Blog Posts</h2>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Stay updated with my latest thoughts on AI development, machine learning insights, and technology trends.
-          </p>
+          <h2 className="text-4xl font-bold mb-4 accent-title">Latest Blog Posts</h2>
+          <div className="accent-underline"></div>
         </div>
-        <BlogPosts />
-      </div>
+        <div className="my-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <BlogPosts cardMode />
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900/30">

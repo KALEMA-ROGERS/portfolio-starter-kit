@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import { BlogPosts } from 'app/components/posts'
 
@@ -16,7 +15,7 @@ export default function Page() {
           </h2>
         </div>
         <p className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 max-w-4xl mx-auto leading-relaxed">
-          Full Stack Developer & AI/ML Engineer focused on building AI-powered software and systems —
+          Full Stack Developer & AI/ML Engineer focused on building AI-powered software and systems,
           from intelligent chatbots and RAG pipelines to custom AI agents and production ML deployments.
         </p>
         <div className="flex justify-center space-x-4 pt-6">
@@ -32,8 +31,7 @@ export default function Page() {
       {/* Services Section */}
       <section className="space-y-12">
         <div className="grid md:grid-cols-2 gap-8">
-          {[
-            {
+          {[{
               title: "AI Chat Assistant",
               description: "Built a sophisticated AI chatbot with RAG capabilities, supporting multiple LLM providers and real-time streaming responses.",
               image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg",

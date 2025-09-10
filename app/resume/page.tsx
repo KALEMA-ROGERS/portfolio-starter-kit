@@ -1,44 +1,44 @@
 const experiences = [
   {
-    title: "Senior AI/ML Developer",
-    company: "Tech Innovations Ltd",
-    period: "02/2024 - Present",
-    description: "Built an AI shopping assistant that scrapes real-time prices from Walmart and Amazon, recommends the best deals, applies coupons automatically, and streamlines checkout—offering a Perplexity-like shopping experience.",
+    title: "AI/ML Developer (BootCamp)",
+    company: "African Talent Acadmey (AFTA) - Time Plage",
+    period: "05/2025 - 09/2025",
+    description: "Learnt & Built AI powered Systems with the current technologies that are required in development of an AI powered systems or softwares",
     achievements: [
-      "Developed real-time price comparison AI system",
-      "Implemented automated coupon application",
-      "Created intelligent recommendation engine",
-      "Reduced checkout time by 60%"
+      "AI-Powered Fintech Investment Intelligence",
+      "Document RAG System",
+      "Built Chat Bots",
+      "Salary-Loan Calculator"
     ],
-    tech: ["Python", "FastAPI", "OpenAI", "PostgreSQL"],
+    tech: ["Python", "FastAPI", "OpenAI", "PostgreSQL", "Streamlit", "VectorDB's", "LangSmith", "LangChain & Langgraph", "etc"],
     gradient: "from-blue-500 to-cyan-600"
   },
   {
-    title: "AI/ML Developer",
-    company: "RideShare Solutions",
-    period: "08/2022 - 10/2023",
-    description: "Developed an AI-powered routing and pricing assistant that optimizes ride assignments by balancing rider satisfaction and driver availability. It dynamically adjusts pricing, supports advance bookings, and uses historical demand data to improve efficiency and reduce wait times.",
+    title: "Internship Training",
+    company: "Stratcom Communications and IT Solutions Ltd",
+    period: "06/2024 - 08/2024",
+    description: "Assisted in the implementation and upkeep of local networking hardware. Contributed in web application development, specifically for a micro finance system. Acquired hands-on IT support/system integration experience working under Stuart McCarthy Sebulime.",
     achievements: [
-      "Built dynamic pricing algorithm",
-      "Implemented route optimization system",
-      "Created demand prediction model",
-      "Improved driver utilization by 40%"
+      "Networking & Systems Administration",
+      "Cisco Practicals",
+      "Pc Repair & Software Maintainance",
+      "Web Apps Development"
     ],
-    tech: ["Python", "TensorFlow", "Django", "Redis", "MongoDB"],
+    tech: ["Putty", "Django", "JavaScript", "MongoDB"],
     gradient: "from-purple-500 to-pink-600"
   },
   {
-    title: "Junior AI Developer",
-    company: "Digital Art Studio",
-    period: "06/2021 - 05/2022",
-    description: "Built a generative NFT system using DALL·E for unique images and GPT for themed captions, enabling scalable, automated NFT creation with customizable prompts for digital art marketplaces.",
+    title: "Ambassador",
+    company: " AfriLead EduTourism Network - ALEN",
+    period: "08/2024 - Present",
+    description: "AfriLead EduTourism Network is not just an International Organisation; It's a dynamic Global Network transforming young leaders into empowered and connected change-makers. It connects individuals, institutions, and communities within Africa and the globe’s rich heritages, challenges, and limitless potential, creating immersive, action-oriented learning experiences that ignite lasting impact. By fostering collaboration, innovation, and sustainable development, It equips future leaders with the tools to address the world’s most urgent challenges like climate change, social inequality, unemployment, and educational gaps.",
     achievements: [
-      "Developed NFT generation pipeline",
-      "Integrated DALL·E and GPT APIs",
-      "Created automated caption system",
-      "Generated 10,000+ unique NFTs"
+      "Actively promoting educational tourism and leadership development",
+      "Advocating for innovative learning experiences across Africa",
+      "Promoting ALEN's Mission, Vision in my Society, Country, and across the social media",
+      "Engaging with young professionals to foster networking and skill-building opportunities"
     ],
-    tech: ["Python", "OpenAI API", "Web3", "Solidity", "React"],
+    tech: ["Advertising it's activities", "Engagements with the community & changemakers", "Involvements in ALEN programes"],
     gradient: "from-emerald-500 to-teal-600"
   }
 ];
@@ -84,7 +84,7 @@ export default function ResumePage() {
         </h1>
         <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto"></div>
         <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-          Full Stack Developer & AI/ML Engineer with 2 years of experience building AI‑powered systems — chatbots, agentic AI, RAG, and production ML.
+          Full Stack Developer & AI/ML Engineer with 2 years of experience building AI‑powered systems: chatbots, agentic AI, RAG, and production ML.
         </p>
       </div>
 
