@@ -34,28 +34,28 @@ export default function Page() {
           {[{
               title: "AI Chat Assistant",
               description: "Built a sophisticated AI chatbot with RAG capabilities, supporting multiple LLM providers and real-time streaming responses.",
-              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg",
+              image: "https://img.freepik.com/premium-vector/chat-bot-vector-logo-design-concept_418020-241.jpg",
               features: [
                 "Multi-LLM Integration (GPT-4, Claude, Gemini)",
                 "Real-time WebSocket streaming",
                 "Advanced RAG with vector search",
                 "Custom prompt engineering"
               ],
-              tech: ["Next.js", "FastAPI", "Pinecone", "OpenAI"],
+              tech: ["Streamlit", "FastAPI", "ChromaDB", "OpenAI"],
               link: "#"
             },
             {
-              title: "ML Model Deployment",
-              description: "Deployed a computer vision model for image classification with automated scaling and monitoring.",
-              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+              title: "Booking Appointment App",
+              description: "Developed a web based booking appointment application that allows patients to make and schedule appointments with the hospital, & for the hospital to manage appointment schedules with ease.",
+              image: "https://medic-frontend.onrender.com/assets/logo-CEnDz-a2.png",
               features: [
-                "Docker containerization",
-                "Auto-scaling infrastructure",
-                "Real-time monitoring",
-                "RESTful API endpoints"
+                "Streanlined appointment booking",
+                "Improved patient engagement",
+                "Clear information dissemination",
+                "User-friendly interface"
               ],
-              tech: ["Python", "Docker", "AWS", "TensorFlow"],
-              link: "#"
+              tech: ["React", "Express", "MongoDB", "Node js", "JaveScript"],
+              link: "https://medic-frontend.onrender.com/"
             },
             {
               title: "Data Analytics Dashboard",
@@ -80,7 +80,7 @@ export default function Page() {
                 "Workflow orchestration",
                 "Integration APIs"
               ],
-              tech: ["Node.js", "LangChain", "MongoDB", "Zapier"],
+              tech: ["Streamlit", "LangChain", "ChromaDB", "Zapier", "Python", "OpenAI"],
               link: "#"
             }
           ].map((project, index) => (
@@ -132,14 +132,14 @@ export default function Page() {
             { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
             { name: "AWS", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
             { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
-            { name: "OpenAI", icon: "https://raw.githubusercontent.com/openai/openai-cookbook/main/examples/images/openai-logo.png" },
+            { name: "OpenAI", icon: "https://www.bing.com/images/search?view=detailV2&ccid=os%2bmIevd&id=C68C642C463E4A8206C19F730502E20429C8AD4D&thid=OIP.os-mIevdcbSaegyhFvNfxwHaHa&mediaurl=https%3a%2f%2fvectorseek.com%2fwp-content%2fuploads%2f2023%2f02%2fOpenAI-Logo-Vector.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a2cfa621ebdd71b49a7a0ca116f35fc7%3frik%3dTa3IKQTiAgVznw%26pid%3dImgRaw%26r%3d0&exph=1000&expw=1000&q=openai+logo&FORM=IRPRST&ck=B9C118FF3D1E4A20044DBFFAD3E86811&selectedIndex=1&itb=0"},
             { name: "LangChain", icon: "https://avatars.githubusercontent.com/u/139019536?s=200&v=4" },
             { name: "Pinecone", icon: "https://avatars.githubusercontent.com/u/78167460?s=200&v=4" },
             { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
             { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
             { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
             { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-            { name: "Scikit-learn", icon: "https://upload.wikimedia.orgikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
+            { name: "Scikit-learn", icon: "https://www.bing.com/ck/a?!&&p=e206abc66015c7c873e8e47dede4c3ce595c1ec3fa936c8363bf60976b4af607JmltdHM9MTc1NzQ2MjQwMA&ptn=3&ver=2&hsh=4&fclid=1e5be66e-5390-6b72-326b-f02c52126ab7&u=a1L2ltYWdlcy9zZWFyY2g_cT1TY2lraXQtbGVhcm4lMjBsb2dvJkZPUk09SVFGUkJBJmlkPTAwRjlDRjcyRDUzMDMxQUZFRTIyMkNBQjBEOTI0ODUzMzBDRTcwNDk" },
             { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
             { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
             { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
@@ -178,7 +178,7 @@ export default function Page() {
             <h3 className="text-2xl font-bold mb-2 text-neutral-900 dark:text-neutral-100">Kalema Rogers</h3>
             <p className="text-lg font-medium text-blue-700 dark:text-blue-300 mb-2">Full Stack Developer & AI/ML Engineer</p>
             <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4 text-center">
-              I have 2 years of experience building AI‑powered software — chatbots, agentic systems (MCP/voice), RAG pipelines, and fine‑tuned LLM solutions — and delivering them end‑to‑end with modern web stacks. Based in Kampala, Uganda. I love shipping practical, scalable AI products that solve real problems.
+              I have 2 years of experience building AI‑powered software — chatbots, agentic systems (MCP/voice), RAG pipelines, and fine‑tuned LLM solutions and delivering them end‑to‑end with modern web stacks. Based in Kampala, Central-Region, Uganda. I love shipping practical, scalable AI products that solve real problems.
             </p>
             <div className="flex gap-4 justify-center mt-2">
               <a href="mailto:rogerskalema0@gmail.com" className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow hover:scale-105 transition">Email</a>
