@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 import { BlogPosts } from 'app/components/posts'
 
 export default function Page() {
@@ -191,19 +192,18 @@ export default function Page() {
       </section>
 
       {/* Blog Section */}
+      {/* Blog Section */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4 accent-title">Latest Blog Posts</h2>
+          <h2 className="text-4xl font-bold mb-2 accent-title">Latest Blog Posts</h2>
           <div className="accent-underline"></div>
         </div>
-        <div className="my-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BlogPosts cardMode />
-          </div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <BlogPosts cardMode />
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 function HomeIcon({ name }: { name: string }) {

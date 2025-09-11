@@ -66,16 +66,16 @@ export function Navbar() {
     <header className="sticky top-0 z-50 mb-16">
       <div className="w-full">
         <nav
-          className={`flex flex-row items-center justify-between relative px-6 py-4 transition-all duration-500 ${
+          className={`flex flex-col md:flex-row items-center justify-between relative px-4 md:px-6 py-2 md:py-4 transition-all duration-500 ${
             isScrolled ? 'backdrop-blur-md bg-white/90 dark:bg-black/90 rounded-2xl shadow-lg border border-neutral-200/50 dark:border-neutral-800/50' : 'bg-transparent'
           }`}
           id="nav"
         >
           {/* Logo/Avatar */}
-          <Link href="/" className="flex items-center mr-8">
-            <img src="/DSC_3472.JPG" alt="Logo" className="w-20 h-20 rounded-full border-2 border-blue-500 shadow" />
+          <Link href="/" className="flex items-center mb-2 md:mb-0 md:mr-8">
+            <img src="/DSC_3472.JPG" alt="Logo" className="w-14 h-14 md:w-20 md:h-20 rounded-full border-2 border-blue-500 shadow" />
           </Link>
-          <div className="flex flex-row space-x-1 relative">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-1 w-full md:w-auto items-center justify-center">
             {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = pathname === path
               return (
@@ -84,7 +84,7 @@ export function Navbar() {
                   href={path}
                   className={`
                     relative transition-all duration-300 ease-out
-                    flex align-middle py-3 px-6 rounded-full
+                    flex align-middle py-2 md:py-3 px-4 md:px-6 rounded-full
                     font-medium text-sm
                     ${isActive 
                       ? 'text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg' 

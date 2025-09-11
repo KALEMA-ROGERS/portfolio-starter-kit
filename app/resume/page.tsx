@@ -1,7 +1,7 @@
 const experiences = [
   {
     title: "AI/ML Developer (BootCamp)",
-    company: "African Talent Acadmey (AFTA) - Time Plage",
+    company: "African Talent Acadmey (AFTA) - Time Pledge",
     period: "05/2025 - 09/2025",
     description: "Learnt & Built AI powered Systems with the current technologies that are required in development of an AI powered systems or softwares",
     achievements: [

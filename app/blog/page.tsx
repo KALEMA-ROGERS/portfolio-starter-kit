@@ -73,7 +73,7 @@ const featuredProjects = [
     ],
     tech: ["LangChain + LangGraph ", "OpenAI GPT-4 ", "ChromaDB", "Streamlit", "SQLite + Redis"],
     gradient: "from-orange-500 to-yellow-500",
-    status: "Live",
+    status: "In Progress",
     link: "https://github.com/Samuelms46/FintelliUG"
   }
 ];
@@ -186,20 +186,21 @@ export default function Page() {
       {/* Blog Section */}
       <section className="space-y-12">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4 accent-title">Latest Blog Posts</h2>
+          <h2 className="text-3xl font-bold mb-4 accent-title">Latest Blog Posts</h2>
           <div className="accent-underline"></div>
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            Stay updated with my latest thoughts on AI development, machine learning insights, and technology trends.
+          </p>
         </div>
-        <div className="my-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BlogPosts cardMode />
-          </div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <BlogPosts cardMode />
         </div>
       </section>
 
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900/30">
         <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
-          Interested in Similar Solutions?
+          Interested in Similar Solutions ?
         </h2>
         <p className="text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl mx-auto">
           Let's discuss how I can help you build similar AI-powered solutions for your business. 
@@ -233,5 +234,5 @@ export default function Page() {
         </div>
       </div>
     </section>
-  )
+  );
 }

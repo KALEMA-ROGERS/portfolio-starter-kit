@@ -105,7 +105,7 @@ export default function ContactPage() {
           </div>
         </a>
 
-        {/* LabLab Profile Card */}
+        {/* LabLab.ai Profile Card */}
         <a 
           href="https://lablab.ai/u/@Kalema_Rogers256"
           target="_blank"
@@ -120,7 +120,7 @@ export default function ContactPage() {
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                LabLab Profile
+                LabLab.ai Profile
               </h3>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 truncate group-hover:text-neutral-800 dark:group-hover:text-neutral-200 transition-colors">
                 @Kalema_Rogers256
@@ -139,12 +139,12 @@ export default function ContactPage() {
       <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900/30">
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
-            Ready to Start a Project?
+            Ready to Start a Project ?
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
             I'm always interested in new opportunities and exciting projects. 
             Whether you need AI solutions, web development, or just want to discuss ideas, 
-            I'd be happy to hear from you!
+            I'd be happy to hear from you !
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a 
@@ -175,7 +175,7 @@ export default function ContactPage() {
 
       {/* Response Time Info */}
       <div className="text-center text-sm text-neutral-500 dark:text-neutral-400">
-        <p>📍 Based in Kampala, Uganda (UTC+3)</p>
+        <p>📍 Based in Kampala, Central-Region, Uganda (UTC+3)</p>
         <p className="mt-1">I typically respond within 24 hours</p>
       </div>
     </section>
