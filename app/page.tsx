@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { BlogPosts } from 'app/components/posts'
-import { Testimonials } from 'app/components/testimonials'
-import { Testimonials } from './components/testimonials';
+/*import { Testimonials } from 'app/components/testimonials'
+import { Testimonials } from './components/testimonials';*/
 
 export default function Page() {
   return (
