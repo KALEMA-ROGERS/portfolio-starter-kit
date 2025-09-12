@@ -1,5 +1,51 @@
-import { useForm, ValidationError } from '@formspree/react';
+'use client'
+
+import { useState } from 'react';
+
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mzzayojn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section className="max-w-4xl mx-auto space-y-12">
       {/* Header Section */}
@@ -20,28 +66,90 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold mb-4 text-center">Send a Direct Message</h2>
           <form
             className="max-w-xl mx-auto p-6 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow"
-            method="POST"
-            //  https://formspree.io - It's where you create the form from.
-            action="https://formspree.io/f/mzzayojn" // Replace with your Formspree endpoint or backend
+            onSubmit={handleSubmit}
           >
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Name</label>
-              <input type="text" id="name" name="name" required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                value={formData.name}
+                onChange={handleInputChange}
+                required 
+                className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" 
+              />
             </div>
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Email</label>
-              <input type="email" id="email" name="email" required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                value={formData.email}
+                onChange={handleInputChange}
+                required 
+                className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" 
+              />
             </div>
             <div className="mb-4">
               <label htmlFor="message" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Message</label>
-              <textarea id="message" name="message" rows={5} required className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" />
+              <textarea 
+                id="message" 
+                name="message" 
+                value={formData.message}
+                onChange={handleInputChange}
+                rows={5} 
+                required 
+                className="mt-1 block w-full rounded-md border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-2 text-neutral-900 dark:text-neutral-100" 
+              />
             </div>
             {/* Simple spam protection: honeypot field */}    
             <div style={{ display: 'none' }}>
               <label htmlFor="_gotcha">Leave this field blank</label>
               <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
             </div>
-            <button type="submit" className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">Send Message</button>
+            <button 
+              type="submit" 
+              disabled={isSubmitting || submitStatus === 'success'}
+              className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+            >
+              {isSubmitting ? (
+                <>
+                  <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+                  </svg>
+                  Sending...
+                </>
+              ) : submitStatus === 'success' ? (
+                <>
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Message Sent!
+                </>
+              ) : (
+                'Send Message'
+              )}
+            </button>
+            
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                <p className="text-green-800 dark:text-green-200 text-center font-medium">
+                  Thank you! Your message has been sent successfully. I'll get back to you within 24 hours.
+                </p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                <p className="text-red-800 dark:text-red-200 text-center font-medium">
+                  Sorry, there was an error sending your message. Please try again.
+                </p>
+              </div>
+            )}
+            
             <p className="mt-4 text-center text-sm text-neutral-600 dark:text-neutral-400">Messages will be sent to <span className="font-semibold">rogerskalema0@gmail.com</span> via Formspree.</p>
           </form>
         </div>

@@ -1,6 +1,7 @@
-import React from 'react';
 import Link from 'next/link';
 import { BlogPosts } from 'app/components/posts'
+import { Testimonials } from 'app/components/testimonials'
+import { Testimonials } from './components/testimonials';
 
 export default function Page() {
   return (
@@ -148,7 +149,6 @@ export default function Page() {
             { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
             { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
             { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
-            { name: "Web3", icon: "https://raw.githubusercontent.com/web3/web3.js/1.x/docs/assets/logo/web3js.svg" },
             { name: "Solidity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
             { name: "DeepLearning.AI", icon: "https://avatars.githubusercontent.com/u/40403612?s=200&v=4" },
           ].map((skill, index) => (
@@ -166,6 +166,13 @@ export default function Page() {
           ))}
         </div>
       </section>
+
+      {/* Testimonials Section (commented out) */}
+      {/**
+      <section className="space-y-12">
+        <Testimonials />
+      </section>
+      */}
 
       {/* About Section */}
       <section className="space-y-12">
@@ -185,13 +192,12 @@ export default function Page() {
               <a href="mailto:rogerskalema0@gmail.com" className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow hover:scale-105 transition">Email</a>
               <a href="https://www.linkedin.com/in/kalema-rogers-a1b9302ba" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-xl border border-blue-500 text-blue-700 dark:text-blue-300 font-semibold shadow hover:bg-blue-50 dark:hover:bg-blue-900 transition">LinkedIn</a>
               <a href="https://github.com/KALEMA-ROGERS" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-xl border border-neutral-300 text-neutral-700 dark:text-neutral-300 font-semibold shadow hover:bg-neutral-100 dark:hover:bg-neutral-800 transition">GitHub</a>
-              <a href="https://lablab.ai/u/@Kalema_Rogers256" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-xl border border-pink-400 text-pink-600 dark:text-pink-300 font-semibold shadow hover:bg-pink-50 dark:hover:bg-pink-900 transition">LabLab</a>
+              <a href="https://lablab.ai/u/@Kalema_Rogers256" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-xl border border-pink-400 text-pink-600 dark:text-pink-300 font-semibold shadow hover:bg-pink-50 dark:hover:bg-pink-900 transition">LabLab.ai</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Blog Section */}
       {/* Blog Section */}
       <section className="space-y-12">
         <div className="text-center">
