@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
+import { formatDate, getBlogPosts } from '../blog/utils'
 
 export function BlogPosts({ cardMode = false }: { cardMode?: boolean }) {
   let allBlogs = getBlogPosts()
@@ -35,7 +35,7 @@ export function BlogPosts({ cardMode = false }: { cardMode?: boolean }) {
   }
 
   // Card mode for attractive blog post cards
-  return (
+   return (
     <>
       {sortedBlogs.map((post) => (
         <Link
@@ -50,10 +50,10 @@ export function BlogPosts({ cardMode = false }: { cardMode?: boolean }) {
             <span className="text-xs text-blue-600 dark:text-blue-400 font-semibold mb-2">{formatDate(post.metadata.publishedAt, false)}</span>
             <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">{post.metadata.title}</h3>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-3">{post.metadata.summary}</p>
-            <span className="mt-auto text-blue-600 dark:text-blue-400 font-semibold group-hover:underline">Read More →</span>
+            <span className="mt-auto text-blue-600 dark:text-blue-400 font-semibold group-hover:underline">Read More</span>
           </div>
         </Link>
       ))}
     </>
-  )
+  ) 
 }

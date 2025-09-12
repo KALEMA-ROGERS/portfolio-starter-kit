@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { BlogPosts } from 'app/components/posts'
-/*import { Testimonials } from 'app/components/testimonials'
-import { Testimonials } from './components/testimonials';*/
+import { BlogPosts } from './components/posts'
+//import { Testimonials } from './components/testimonials'
+
 
 export default function Page() {
   return (
@@ -199,7 +199,7 @@ export default function Page() {
       </section>
 
       {/* Blog Section */}
-      <section className="space-y-12">
+      <section className="space-y-12 center max-w-5xl mx-auto">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-2 accent-title">Latest Blog Posts</h2>
           <div className="accent-underline"></div>
