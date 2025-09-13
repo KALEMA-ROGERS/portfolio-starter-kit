@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
-import type { MDXComponents } from 'mdx/types'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -109,11 +108,9 @@ export function CustomMDX(props) {
   )
 }
 
-export function useMDXComponents(
-  components: MDXComponents
-): MDXComponents {
-  return { ...components, 
-    // Add any custom components you use in your MDX
+export function useMDXComponents(components: any) {
+  return { 
+    ...components,
     Table,
     Image: RoundedImage,
     a: CustomLink,
