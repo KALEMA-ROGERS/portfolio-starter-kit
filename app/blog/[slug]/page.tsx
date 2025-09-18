@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+  const { slug } = params;
   let post = getBlogPosts().find((post) => post.slug === slug);
   if (!post) {
     return;
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function Blog({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+  const { slug } = params;
   let post = getBlogPosts().find((post: { slug: string }) => post.slug === slug);
 
   if (!post) {
