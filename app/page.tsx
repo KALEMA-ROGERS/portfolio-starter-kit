@@ -199,7 +199,7 @@ export default function Page() {
       </section>
 
       {/* Blog Section */}
-      <section className="space-y-12 center max-w-5xl mx-auto">
+      <section className="space-y-12 center">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-2 accent-title">Latest Blog Posts</h2>
           <div className="accent-underline"></div>

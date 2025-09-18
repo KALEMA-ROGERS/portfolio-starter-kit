@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 ::selection {
   background-color: #47a3f3;
@@ -83,11 +85,10 @@ body::before {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all underline-offset-2 decoration-[0.1em];
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
   content: '#';
 }
 
@@ -96,59 +97,55 @@ body::before {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply rounded-lg overflow-x-auto border border-gray-200 py-2 px-3 text-sm;
 }
-
 .prose code {
   @apply px-1 py-0.5 rounded-lg;
 }
-
 .prose pre code {
   @apply p-0;
   border: initial;
   line-height: 1.5;
 }
-
 .prose code span {
   @apply font-medium;
 }
-
 .prose img {
   /* Don't apply styles to next/image */
   @apply m-0;
 }
-
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-4 text-gray-800 dark:text-gray-200;
 }
-
 .prose h1 {
   @apply text-4xl font-medium tracking-tight mt-6 mb-2;
 }
-
 .prose h2 {
   @apply text-xl font-medium tracking-tight mt-6 mb-2;
 }
-
 .prose h3 {
   @apply text-xl font-medium tracking-tight mt-6 mb-2;
 }
-
 .prose h4 {
   @apply text-lg font-medium tracking-tight mt-6 mb-2;
 }
-
 .prose strong {
   @apply font-medium;
 }
-
 .prose ul {
   @apply list-disc pl-6;
 }
-
 .prose ol {
   @apply list-decimal pl-6;
 }
+.btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-white shadow-lg transition-all duration-300;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+.btn-outline {
+  @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold border border-gray-300 dark:border-gray-700 text-gray-700 transition-all duration-300;
+}
+.btn-outline:hover { @apply bg-gray-100 dark:bg-gray-800; }
 
 .prose > :first-child {
   /* Override removing top margin, causing layout shift */
@@ -307,15 +304,10 @@ table {
 
 /* Button styles */
 .btn-primary {
-  @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-white shadow-lg transition-all duration-300;
   background: linear-gradient(90deg, #2563eb, #7c3aed);
 }
 .btn-primary:hover { transform: translateY(-1px) scale(1.02); filter: brightness(1.05); }
 
-.btn-outline {
-  @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 transition-all duration-300;
-}
-.btn-outline:hover { @apply bg-neutral-100 dark:bg-neutral-800; }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
