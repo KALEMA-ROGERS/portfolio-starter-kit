@@ -1,10 +1,4 @@
 
-import { notFound } from 'next/navigation'
-import { CustomMDX } from '../../components/mdx'
-import { formatDate, getBlogPosts } from '../utils'
-import { baseUrl } from '../../sitemap'
-
-type BlogParams = { params: { slug: string } };
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
@@ -14,7 +8,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: BlogParams) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   const { slug } = params;
   let post = getBlogPosts().find((post) => post.slug === slug);
   if (!post) {
@@ -55,7 +49,7 @@ export async function generateMetadata({ params }: BlogParams) {
   };
 }
 
-export default async function Blog({ params }: BlogParams) {
+export default async function Blog({ params }: { params: { slug: string } }) {
   const { slug } = params;
   let post = getBlogPosts().find((post: { slug: string }) => post.slug === slug);
 
