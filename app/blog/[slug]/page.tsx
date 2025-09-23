@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation'
-import { CustomMDX } from '../../components/mdx'
 import { formatDate, getBlogPosts } from '../utils'
 import { baseUrl } from '../../sitemap'
 
@@ -55,11 +54,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+
 export default async function Blog({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   let post = getBlogPosts().find((post: { slug: string }) => post.slug === slug);
 
   if (!post) {
+    notFound();
+  }
+
+  // Dynamically import the MDX file as a React component
+  let PostComponent: React.ComponentType<any>;
+  try {
+    PostComponent = (await import(`../posts/${slug}.mdx`)).default;
+  } catch (e) {
     notFound();
   }
 
@@ -96,8 +104,8 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
         </p>
       </div>
       <article className="prose">
-        <CustomMDX source={post.content} />
+        <PostComponent />
       </article>
     </section>
-  )
+  );
 }
